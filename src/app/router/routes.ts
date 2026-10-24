@@ -9,4 +9,16 @@ export const routes = [
   { path: '/configuration/access', label: 'Access Management', description: 'Page and application access', section: 'configuration' },
   { path: '/configuration/integrations', label: 'Integration Settings', description: 'Integration registry', section: 'configuration' },
   { path: '/configuration/audit', label: 'Audit Logs', description: 'Audit review', section: 'configuration' },
-] as const;
+] as const
+
+export interface RouteDefinition {
+  path: string
+  title: string
+  description: string
+}
+
+export const routeDefinitions: RouteDefinition[] = routes.map((route) => ({
+  path: route.path,
+  title: route.label,
+  description: route.description,
+}))
