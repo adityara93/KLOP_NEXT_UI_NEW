@@ -1,0 +1,2 @@
+import { Alert, Box, Paper, Typography } from '@mui/material';
+export function NotImplemented({ title }: { title: string }) { return <Paper variant='outlined' sx={{ p: { xs: 2, md: 4 } }}><Typography variant='h6' gutterBottom>{title}</Typography><Alert severity='info'>This feature is not implemented. Backend data and authorization are not connected. This screen is a WSL-02 shell preview only.</Alert><Box sx={{ mt: 2 }}><Typography color='text.secondary' variant='body2'>No live data, permissions, or authentication are represented here.</Typography></Box></Paper>; }
